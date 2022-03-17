@@ -11,6 +11,8 @@ const getCountries = async () => {
 
 getCountries()
 .then(data => console.log('resolved:', data))
+ 
+
 .catch(err => console.log('rejected:', err))
 
 
