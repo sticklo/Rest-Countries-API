@@ -10,7 +10,7 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <script src="./scripts/learnFetch.js"></script>
+    <script src="./scripts/app.js"></script>
   </head>
   <body>
     <header>
@@ -30,32 +30,40 @@
             src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
           />
 
-          <input type="text" id="searchbar" name="search" class="search" />
-          <label class="placeholder">Search for a country...</label>
+          <input
+            type="text"
+            id="searchbar"
+            name="search"
+            class="search"
+            placeholder="Search for a country..."
+          />
+          <!-- <label class="placeholder">Search for a country...</label> -->
         </div>
 
-        <select class="select">
-          <option hidden>Filter by Region</option>
-          <option value="Africa" class="">Africa</option>
-          <option value="America" class="">America</option>
-          <option value="Asia" class="">Asia</option>
-          <option value="Europe" class="">Europe</option>
-          <option value="Oceania" class="">Oceania</option>
+        <select name="region" id="region_select" class="select">
+          <option value="" selected hidden>--Filter by Region--</option>
+          <option value="africa" class="">Africa</option>
+          <option value="americas" class="">America</option>
+          <option value="asia" class="">Asia</option>
+          <option value="europe" class="">Europe</option>
+          <option value="oceania" class="">Oceania</option>
         </select>
       </form>
       <section>
-        <div>
-              <div>
-                  <img alt="Russian Flag"  src="./assets/images/Flag-Russia.jpg">
-                  <div>
-                      <p><strong>Russia</strong></p>
-                      <p>Population : 81,500,566</p>
-                      <p>Region : Europe</p>
-                      <p>Capital : Moscow</p>
-                  </div>
-              </div>
-          </div>
+        <div id="countries_container">
+          <!-- <div class="country">
+            <div class="country__flag">
+              <img src="./assets//images//Flag-Russia.jpg" alt="russia flag" />
+            </div>
+            <div class="country__info">
+              <h3 class="country__name">germany</h3>
+              <p class="country__region">Region: europe</p>
+              <p class="country__population">Population: 120,000</p>
+            </div>
+          </div> -->
+        </div>
       </section>
     </main>
+    
   </body>
 </html>
