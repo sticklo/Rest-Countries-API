@@ -41,8 +41,8 @@ class App {
     filterCountry() {
       console.log('filterCountry', this.countries);
       this.filteredCountries = this.countries.filter((country) => {
-        if (this.selectRegionValue === '' && this.inputSearchValue === '') {
-          return true;
+        if (this.selectRegionValue === '') {
+          return country.name.toLowerCase().includes(this.inputSearchValue);
         } else if (
           country.name.toLowerCase().includes(this.inputSearchValue) &&
           country.region.toLowerCase() === this.selectRegionValue
