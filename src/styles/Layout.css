@@ -1,5 +1,5 @@
 /* font import */
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@300&family=Work+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@300&family=Work+Sans&display=swap');
 
 /* css reset  */
 *,
@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: hsl(0, 0%, 98%);
   /* font-size: 1.4em; */
 }
@@ -24,11 +24,19 @@ body {
   background-color: #fff;
 }
 
+.nav > h2 {
+  font-size: 1rem;
+}
+
 .nav__dark__mode {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.nav__dark__mode p {
+  font-size: 1rem;
 }
 
 main {
@@ -37,60 +45,92 @@ main {
 
 form {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 /* search-bar styles */
 
 .search__wrapper {
-  position: relative;
+  /* position: relative; */
+  background-color: #fff;
+  box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1);
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  column-gap: 0.73rem;
 }
 
 .search-icon {
-  position: absolute;
+  /* position: absolute;
   top: 14.5px;
   left: 20px;
-  width: 14px;
+  width: 14px; */
 }
 
 .placeholder {
- 
   position: absolute;
   top: 0.75rem;
-   right: 9rem;
-   font-size: small;
-  
+  right: 9rem;
+  font-size: small;
 }
 .search {
   border: none;
   border-radius: 5px;
-  height: 18px;
-  width: 20rem;
-  padding: 20px;
+  /* height: 18px; */
+  /* width: 20rem; */
+  /* padding: 20px; */
+  outline: 0;
+  width: 100%;
+}
+
+.search:hover,
+.search:focus {
+  /* border: 1.5px solid hsl(209, 23%, 22%); */
+  outline: 0;
+  /* background-color: white; */
+}
+
+/* .search__input::placeholder {
+  color: red;
+} */
+
+/* select dropdown styles */
+
+.select {
+  border: none;
+  border-radius: 5px;
+  /* height: 18px; */
+  width: 11.5rem;
+  padding: 12px;
   outline: 0;
   background-color: #fff;
   box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1);
 }
 
-.search:hover,
-.search:focus {
-  border: 1.5px solid hsl(209, 23%, 22%);
-  background-color: white;
+#countries_container > .country {
+  flex-basis: 20%;
+}
+#countries_container > .country > .country__flag {
+  max-width: 100%;
+}
+#countries_container > .country > .country__flag > img {
+  max-width: 100%;
 }
 
-
-/* select dropdown styles */
-
-.select {
-    border: none;
-    border-radius: 5px;
-    height: 18px;
-    width: 11.5rem;
-    padding: 20px;
-    outline: 0;
-    background-color: #fff;
-    box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1);
-    
-
+@media (min-width: 768px) {
+  #countries_container {
+    column-gap: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+  }
+  .nav > h2 {
+    font-size: 1.5rem;
+  }
+  form {
+    flex-flow: row nowrap;
+  }
 }
-
