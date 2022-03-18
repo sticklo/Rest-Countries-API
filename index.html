@@ -11,15 +11,20 @@
       rel="stylesheet"
     />
     <script src="src/scripts/app.js"></script>
+   
   </head>
   <body>
     <header>
       <nav class="nav">
         <h2>Where in the world?</h2>
-        <div class="nav__dark__mode">
+        <button id="theme-switcher" class="nav__dark__mode">
           <i class="bx bx-moon"></i>
           <p>Dark mode</p>
-        </div>
+        </button>
+        <button id="theme-switcher" class="nav__light__mode">
+          <i class='bx bx-sun'></i>
+          <p>Light mode</p>
+        </button>
       </nav>
     </header>
     <main>
@@ -58,5 +63,6 @@
         <div id="country_more_details" class="more_details"></div>
       </div>
     </main>
+    <script src="src/scripts/darkMode.js"></script>
   </body>
 </html>
