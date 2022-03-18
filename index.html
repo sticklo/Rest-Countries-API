@@ -23,35 +23,36 @@
       </nav>
     </header>
     <main>
-      <form>
-        <div class="search__wrapper">
-          <img
-            class="search-icon"
-            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
-          />
+      <div id="countries_view">
+        <form>
+          <div class="search__wrapper">
+            <img
+              class="search-icon"
+              src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+            />
 
-          <input
-            type="text"
-            id="searchbar"
-            name="search"
-            class="search"
-            placeholder="Search for a country..."
-          />
-          <!-- <label class="placeholder">Search for a country...</label> -->
-        </div>
+            <input
+              type="text"
+              id="searchbar"
+              name="search"
+              class="search"
+              placeholder="Search for a country..."
+            />
+            <!-- <label class="placeholder">Search for a country...</label> -->
+          </div>
 
-        <select name="region" id="region_select" class="select">
-          <option value="" selected hidden>--Filter by Region--</option>
-          <option value="africa" class="">Africa</option>
-          <option value="americas" class="">America</option>
-          <option value="asia" class="">Asia</option>
-          <option value="europe" class="">Europe</option>
-          <option value="oceania" class="">Oceania</option>
-        </select>
-      </form>
-      <section>
-        <div id="countries_container">
-          <!-- <div class="country">
+          <select name="region" id="region_select" class="select">
+            <option value="" selected hidden>--Filter by Region--</option>
+            <option value="africa" class="">Africa</option>
+            <option value="americas" class="">America</option>
+            <option value="asia" class="">Asia</option>
+            <option value="europe" class="">Europe</option>
+            <option value="oceania" class="">Oceania</option>
+          </select>
+        </form>
+        <section>
+          <div id="countries_container">
+            <!-- <div class="country">
             <div class="country__flag">
               <img src="./assets//images//Flag-Russia.jpg" alt="russia flag" />
             </div>
@@ -61,8 +62,36 @@
               <p class="country__population">Population: 120,000</p>
             </div>
           </div> -->
+          </div>
+        </section>
+      </div>
+      <div id="country_details" class="hide">
+        <button id="back_btn">&larr; back</button>
+        <div id="country_more_details" class="more_details">
+          <!-- <div class="flag_img_container">
+            <img src="./assets//images//Flag-Russia.jpg" alt="ijebu" />
+          </div>
+          <div class="description">
+            <h1>albania</h1>
+            <div class="left_description">
+              <p>native name: <span>jerry</span></p>
+              <p>population: <span>2837743</span></p>
+              <p>Region: <span>europe</span></p>
+              <p>Sub Region: <span>southern europe</span></p>
+              <p>Capital: <span>Tirana</span></p>
+            </div>
+            <div class="right_description">
+              <p>Top Level Domain: <span>.al</span></p>
+              <p>Currencies: <span>Albanian lek</span></p>
+              <p>Languages: <span>Albanian lek</span></p>
+            </div>
+            <div class="country_borders">
+              <h2>Border Countries:</h2>
+              <div class="country_border">japan</div>
+            </div>
+          </div> -->
         </div>
-      </section>
+      </div>
     </main>
     
   </body>
