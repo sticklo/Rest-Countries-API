@@ -6,30 +6,29 @@ class App {
     this.filteredCountries = [];
     this.selectedCountry = {};
     // hold the value of the search input
-    this.inputSearchValue = '';
+    this.inputSearchValue = "";
     // hold the value of the region select
-    this.selectRegionValue = '';
+    this.selectRegionValue = "";
   }
-  // update --- start
-  countriesViewELement = document.getElementById('countries_view');
-  countryDetailsElement = document.getElementById('country_details');
-  countryMoreDetailsElement = document.getElementById('country_more_details');
-  countryDetailsBackBtnElement = document.getElementById('back_btn');
-  // update --- end
-  countriesContainer = document.getElementById('countries_container');
-  searchInput = document.getElementById('searchbar');
-  regionSelectInput = document.getElementById('region_select');
+
+  countriesViewELement = document.getElementById("countries_view");
+  countryDetailsElement = document.getElementById("country_details");
+  countryMoreDetailsElement = document.getElementById("country_more_details");
+  countryDetailsBackBtnElement = document.getElementById("back_btn");
+
+  countriesContainer = document.getElementById("countries_container");
+  searchInput = document.getElementById("searchbar");
+  regionSelectInput = document.getElementById("region_select");
   async fetchCountries() {
-    const res = await fetch('https://restcountries.com/v2/all');
+    const res = await fetch("https://restcountries.com/v2/all");
     if (res.status !== 200) {
-      throw new Error('cannot fetch the data');
+      throw new Error("cannot fetch the data");
     }
     const data = await res.json();
     return data;
   }
   generateHTML(data) {
     const html = data.map((country) => {
-      // update ---start
       return `
         <div class="country" onclick="(function(){
             app.handleCountryDetails('${country.alpha3Code}');
@@ -48,7 +47,7 @@ class App {
         </div>
       `;
     });
-    return html.join('');
+    return html.join("");
   }
   generateMoreDetailsHTML(country) {
     return `
@@ -86,11 +85,11 @@ class App {
             return false;
         })();return false;">${borderCountry.name}</div>`;
     });
-    return html.join('');
+    return html.join("");
   }
   filterCountry() {
     this.filteredCountries = this.countries.filter((country) => {
-      if (this.selectRegionValue === '') {
+      if (this.selectRegionValue === "") {
         return country.name.toLowerCase().includes(this.inputSearchValue);
       } else if (
         country.name.toLowerCase().includes(this.inputSearchValue) &&
@@ -103,30 +102,28 @@ class App {
       this.filteredCountries
     );
   }
-  // update --- start
+
   handleCountryDetails(alpha3Code) {
     app.selectedCountry = app.filteredCountries.find(
       (country) => country.alpha3Code === alpha3Code
     );
-    app.countriesViewELement.classList.add('hide');
-    app.countryDetailsElement.classList.remove('hide');
+    app.countriesViewELement.classList.add("hide");
+    app.countryDetailsElement.classList.remove("hide");
     app.countryMoreDetailsElement.innerHTML = app.generateMoreDetailsHTML(
       app.selectedCountry
     );
   }
-
-  // update --- end
 }
 
 let app;
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   app = new App();
-  app.searchInput.addEventListener('input', (e) => {
+  app.searchInput.addEventListener("input", (e) => {
     app.inputSearchValue = e.target.value;
     app.filterCountry();
   });
-  app.regionSelectInput.addEventListener('change', (e) => {
+  app.regionSelectInput.addEventListener("change", (e) => {
     app.selectRegionValue = e.target.value;
     app.filterCountry();
   });
@@ -136,8 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const generatedHtmlString = app.generateHTML(data);
     app.countriesContainer.innerHTML = generatedHtmlString;
   });
-  app.countryDetailsBackBtnElement.addEventListener('click', () => {
-    app.countriesViewELement.classList.remove('hide');
-    app.countryDetailsElement.classList.add('hide');
+  app.countryDetailsBackBtnElement.addEventListener("click", () => {
+    app.countriesViewELement.classList.remove("hide");
+    app.countryDetailsElement.classList.add("hide");
   });
 });

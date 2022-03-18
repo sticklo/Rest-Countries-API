@@ -1,5 +1,5 @@
 /* font import */
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@300&family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@300&family=Work+Sans&display=swap");
 
 /* css reset  */
 *,
@@ -11,9 +11,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-color: hsl(0, 0%, 98%);
-  /* font-size: 1.4em; */
 }
 /* navbar  */
 .nav {
@@ -53,7 +52,6 @@ form {
 /* search-bar styles */
 
 .search__wrapper {
-  /* position: relative; */
   background-color: #fff;
   box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1);
   display: flex;
@@ -61,13 +59,6 @@ form {
   margin-bottom: 0.5rem;
   padding: 0.7rem 1.5rem;
   column-gap: 0.73rem;
-}
-
-.search-icon {
-  /* position: absolute;
-  top: 14.5px;
-  left: 20px;
-  width: 14px; */
 }
 
 .placeholder {
@@ -79,30 +70,18 @@ form {
 .search {
   border: none;
   border-radius: 5px;
-  /* height: 18px; */
-  /* width: 20rem; */
-  /* padding: 20px; */
   outline: 0;
   width: 100%;
 }
 
 .search:hover,
 .search:focus {
-  /* border: 1.5px solid hsl(209, 23%, 22%); */
   outline: 0;
-  /* background-color: white; */
 }
-
-/* .search__input::placeholder {
-  color: red;
-} */
-
-/* select dropdown styles */
 
 .select {
   border: none;
   border-radius: 5px;
-  /* height: 18px; */
   width: 11.5rem;
   padding: 12px;
   outline: 0;
@@ -111,7 +90,7 @@ form {
 }
 
 #countries_container > .country {
-  cursor: pointer; /* update */
+  cursor: pointer;
   flex-basis: 20%;
 }
 #countries_container > .country > .country__flag {
@@ -124,12 +103,9 @@ form {
 .more_details {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
+
   padding: 0.5rem;
   text-transform: capitalize;
-  /* background-color: #fff; */
-  /* box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1); */
 }
 #country_details #back_btn {
   background-color: white;
@@ -178,7 +154,6 @@ form {
     column-gap: 5%;
     display: flex;
     flex-flow: row wrap;
-    /* justify-content: space-between; */
   }
   .nav > h2 {
     font-size: 1.5rem;
@@ -195,7 +170,6 @@ form {
     margin-top: 3rem;
   }
   #country_details .flag_img_container {
-    /* border: 1px solid green; */
     max-width: 50%;
     max-height: 45vh;
   }
