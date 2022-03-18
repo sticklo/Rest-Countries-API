@@ -40,8 +40,10 @@ class App {
           </div>
           <div class="country__info">
             <h3 class="country__name">${country.name}</h3>
-            <p class="country__region">Region: ${country.region}</p>
             <p class="country__population">Population: ${country.population}</p>
+            <p class="country__region">Region: ${country.region}</p>
+            <p class="country__capital">Capital: ${country.capital}</p>
+            
           </div>
         </div>
       `;
