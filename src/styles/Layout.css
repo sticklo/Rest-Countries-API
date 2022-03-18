@@ -40,7 +40,7 @@ body {
 }
 
 main {
-  padding: 70px 70px;
+  padding: 20px 20px;
 }
 
 form {
@@ -111,6 +111,7 @@ form {
 }
 
 #countries_container > .country {
+  cursor: pointer; /* update */
   flex-basis: 20%;
 }
 #countries_container > .country > .country__flag {
@@ -120,6 +121,58 @@ form {
   max-width: 100%;
 }
 
+.more_details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 0.5rem;
+  text-transform: capitalize;
+  /* background-color: #fff; */
+  /* box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1); */
+}
+#country_details #back_btn {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 0.43rem 1rem;
+}
+#country_details .flag_img_container {
+  max-width: 100%;
+}
+#country_details .flag_img_container > img {
+  max-width: 100%;
+  height: 100%;
+}
+#country_details .description {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+#country_details h1 {
+  flex-basis: 100%;
+}
+#country_details .description p > span {
+  font-weight: 300;
+}
+#country_details .country_borders {
+  column-gap: 1rem;
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+#country_details .country_borders > h2 {
+  flex-basis: 100%;
+}
+#country_details .country_borders > .country_border {
+  border-radius: 5px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.2rem 2.7rem;
+  width: max-content;
+}
 @media (min-width: 768px) {
   #countries_container {
     column-gap: 5%;
@@ -130,7 +183,31 @@ form {
   .nav > h2 {
     font-size: 1.5rem;
   }
+  main {
+    padding: 70px 70px;
+  }
   form {
     flex-flow: row nowrap;
   }
+  .more_details {
+    column-gap: 3rem;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+  #country_details .flag_img_container {
+    /* border: 1px solid green; */
+    max-width: 50%;
+    max-height: 45vh;
+  }
+  #country_details .description {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1rem;
+    column-gap: 3rem;
+  }
+}
+
+/* UTILS */
+.hide {
+  display: none;
 }
