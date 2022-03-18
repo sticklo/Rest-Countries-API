@@ -8,12 +8,26 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: hsl(0, 0%, 98%);
+  --text-color: #000;
+}
+
+[data-theme="dark"] {
+  --background-color: hsl(209, 23%, 22%);
+  --text-color: #fff;
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Nunito Sans", sans-serif;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
+
 /* navbar  */
 .nav {
   display: flex;
