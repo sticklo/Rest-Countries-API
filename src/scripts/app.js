@@ -90,10 +90,10 @@ class App {
   filterCountry() {
     this.filteredCountries = this.countries.filter((country) => {
       if (this.selectRegionValue === "") {
-        return country.name.toLowerCase().includes(this.inputSearchValue);
+        return country.name.toLowerCase().includes(this.inputSearchValue.toLowerCase());
       } else if (
-        country.name.toLowerCase().includes(this.inputSearchValue) &&
-        country.region.toLowerCase() === this.selectRegionValue
+        country.name.toLowerCase().includes(this.inputSearchValue.toLowerCase()) &&
+        country.region.toLowerCase() === this.selectRegionValue.toLowerCase()
       ) {
         return country;
       }
