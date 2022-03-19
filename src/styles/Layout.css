@@ -126,6 +126,7 @@ form {
 }
 #countries_container {
   row-gap: 4rem;
+  justify-content: center;
   
 }
 
