@@ -126,10 +126,12 @@ form {
 }
 #countries_container {
   row-gap: 4rem;
+  
 }
 
 .country__info{
   padding: 1.2rem;
+  margin-bottom: 3rem;
 } 
 #countries_container > .country {
   box-shadow: 0 12px 40px rgba(128, 128, 128, 0.1);;
